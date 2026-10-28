@@ -18,7 +18,7 @@
     "@owdproject/app-youtube": "workspace:*",
     "@owdproject/core": "workspace:*",
     "@owdproject/module-fs": "workspace:*",
-    "@owdproject/module-persistence": "workspace:*",
+    "@owdproject/nuxt-persistence-pinia": "workspace:*",
     "@owdproject/theme-gnome": "workspace:*",
     "nuxt": "^4.4.4"
   }

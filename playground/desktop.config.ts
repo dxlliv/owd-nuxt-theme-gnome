@@ -2,7 +2,7 @@ import { defineDesktopConfig } from '@owdproject/core'
 
 export default defineDesktopConfig({
   theme: '@owdproject/theme-gnome',
-  modules: ['@owdproject/module-fs', '@owdproject/module-persistence'],
+  modules: ['@owdproject/module-fs', '@owdproject/nuxt-persistence-pinia'],
   apps: [
     '@owdproject/app-classic-audioplayer',
     '@owdproject/app-classic-videoplayer',
