@@ -1,33 +1,37 @@
-<p align="center">
-  <img width="160" height="160" src="https://avatars.githubusercontent.com/u/65117737?s=160&v=4" />
-</p>
-<h1 align="center">GNOME Theme</h1>
-<h3 align="center">
-  GNOME Theme for your Open Web Desktop client.
-</h3>
+# GNOME Theme
 
-## Overview
+An Adwaita style desktop shell for Open Web Desktop, using `@owdproject/nuxt` directly.
 
-This theme for Open Web Desktop recreates the Adwaita GNOME UI.
+## Standalone playground
 
-## Installation
-
-```bash
-pnpm desktop add @owdproject/theme-gnome
+```sh
+pnpm install
+pnpm dev
 ```
 
-## Usage
+The local workspace contains this theme and its playground. It installs the core, Nuxt adapter, kits, filesystem, persistence, and demo apps as packages. It does not require the client repository or `nuxt-desktop`.
 
-#### Configuration
+```sh
+pnpm dev:build
+pnpm dev:generate
+```
 
-```typescript
-// desktop.config.ts
-export default defineDesktopConfig({
-  theme: '@owdproject/theme-gnome',
-  apps: ['@owdproject/app-about'],
+Local snapshot verification uses Verdaccio. From the engine checkout, run `npm run test:gnome:standalone`; the command creates an independent copy and tests its build and static export.
+
+## Use in a Nuxt application
+
+Install the theme and `@owdproject/nuxt`, then configure:
+
+```ts
+export default defineNuxtConfig({
+  ssr: false,
+  modules: ['@owdproject/nuxt'],
+  desktop: { theme: '@dxlliv/owd-nuxt-theme-gnome' },
 })
 ```
 
+Additional apps and modules can be configured in `desktop.config.ts` using `defineDesktopConfig` from `@owdproject/nuxt`.
+
 ## License
 
-The application is released under the [MIT License](LICENSE).
+MIT

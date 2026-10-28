@@ -1,5 +1,5 @@
 <script setup>
-import { useDesktopWorkspaceStore } from 'nuxt-desktop/runtime/stores/storeDesktopWorkspace'
+import { useDesktopWorkspaceStore } from '@owdproject/nuxt/runtime/stores/storeDesktopWorkspace'
 
 const desktopWorkspaceStore = useDesktopWorkspaceStore()
 

@@ -41,6 +41,8 @@ export default {
   },
   apps: {
     explorer: {
+      titleExploring: 'Files — {path}',
+      view: { showHiddenFiles: 'Show Hidden Files' },
       windowTitle: 'Files',
       places: {
         home: 'Home',

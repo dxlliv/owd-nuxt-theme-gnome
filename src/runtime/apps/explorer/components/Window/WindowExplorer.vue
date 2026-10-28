@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useConfirm } from 'primevue/useconfirm'
 import { useI18n } from 'vue-i18n'
-import type { IWindowController } from '@owdproject/core'
+import type { IWindowController } from '@owdproject/nuxt'
 import { createExplorerWindowMenuItems } from '@owdproject/module-fs/runtime/composables/useExplorerWindowMenu'
 import GnomeExplorerShell from '../explorer/GnomeExplorerShell.vue'
 

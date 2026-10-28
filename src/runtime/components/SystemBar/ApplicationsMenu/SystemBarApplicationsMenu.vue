@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import { useApplicationMenu } from '../../../composables/useApplicationMenu'
-import { useDesktopManager } from 'nuxt-desktop/runtime/composables/useDesktopManager'
 
 import { useTemplateRef } from 'vue'
 import { onClickOutside } from '@vueuse/core'
 
 const applicationMenu = useApplicationMenu()
-const desktopManager = useDesktopManager()
 const applicationMenuElement = useTemplateRef('applicationMenuElement')
 
 onClickOutside(

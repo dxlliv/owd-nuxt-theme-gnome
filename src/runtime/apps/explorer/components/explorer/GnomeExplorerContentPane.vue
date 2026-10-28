@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import type { IWindowController } from '@owdproject/core'
-import DataTable from 'primevue/datatable'
+import type { IWindowController } from '@owdproject/nuxt'
 import GnomeExplorerItemContextMenu from './GnomeExplorerItemContextMenu.vue'
 import GnomeExplorerFileIcon from './GnomeExplorerFileIcon.vue'
 import { openVfsFile } from '@owdproject/module-fs/runtime/utils/utilFsOpenFile'
@@ -68,7 +67,7 @@ const showVirtual = computed(
 async function onVirtualOpen(row: VirtualRow) {
   if (row.isDirectory) {
     places?.selectPlace('folder', row.path)
-    props.window.meta = { ...props.window.meta, gnomePlaceView: null }
+    props.window.meta.gnomePlaceView = null
     props.fsExplorer.basePath.value = row.path
     await props.fsExplorer.navigateToDirectory(row.path)
     return
@@ -77,7 +76,7 @@ async function onVirtualOpen(row: VirtualRow) {
   if (!opened) {
     const parent = row.path.replace(/\/[^/]+$/, '') || '/'
     places?.selectPlace('folder', parent)
-    props.window.meta = { ...props.window.meta, gnomePlaceView: null }
+    props.window.meta.gnomePlaceView = null
     await props.fsExplorer.navigateToDirectory(parent)
   }
 }
@@ -85,7 +84,7 @@ async function onVirtualOpen(row: VirtualRow) {
 
 <template>
   <div class="gnome-explorer-content-pane">
-    <DataTable class="gnome-explorer-content-pane__table h-full">
+    <div class="gnome-explorer-content-pane__table">
       <div
         v-if="showVirtual"
         class="gnome-explorer-content-pane__virtual-grid"
@@ -105,12 +104,12 @@ async function onVirtualOpen(row: VirtualRow) {
           <span class="gnome-explorer-content-pane__virtual-label">{{ row.name }}</span>
         </button>
       </div>
-      <KitFsExplorerSelectableArea
+      <DesktopExplorerSelectableArea
         v-else-if="!String(window.meta.path ?? '').startsWith('http')"
         :fs-explorer="fsExplorer"
         :drop-enabled="!isWebUrl"
       >
-        <KitFsExplorerFileEntry
+        <DesktopExplorerFileEntry
           v-for="fileName of directoryEntries"
           :key="fileName"
           :data-filename="fileName"
@@ -144,8 +143,8 @@ async function onVirtualOpen(row: VirtualRow) {
               :layout="layout"
             />
           </template>
-        </KitFsExplorerFileEntry>
-      </KitFsExplorerSelectableArea>
+        </DesktopExplorerFileEntry>
+      </DesktopExplorerSelectableArea>
       <div v-else class="gnome-explorer-content-pane__webview">
         <iframe
           class="gnome-explorer-content-pane__iframe"
@@ -153,7 +152,7 @@ async function onVirtualOpen(row: VirtualRow) {
           :src="browsePath"
         />
       </div>
-    </DataTable>
+    </div>
   </div>
 </template>
 
@@ -223,6 +222,7 @@ async function onVirtualOpen(row: VirtualRow) {
 }
 
 .gnome-explorer-content-pane__table {
+  min-height: 100%;
   background: transparent;
 }
 

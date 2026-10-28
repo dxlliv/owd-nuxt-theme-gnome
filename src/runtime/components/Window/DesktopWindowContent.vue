@@ -6,7 +6,7 @@
   </DesktopCoreWindowContent>
 </template>
 <style scoped lang="scss">
-.owd-window__content {
+.desktop-window__content {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;

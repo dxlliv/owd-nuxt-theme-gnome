@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDesktopWorkspaceStore } from 'nuxt-desktop/runtime/stores/storeDesktopWorkspace'
+import { useDesktopWorkspaceStore } from '@owdproject/nuxt/runtime/stores/storeDesktopWorkspace'
 
 const props = defineProps<{
   window?: IWindowController
@@ -16,6 +16,7 @@ function onWorkspaceWindowDragStart(e) {
 <template>
   <DesktopCoreWindow
     v-bind="$props"
+    class="owd-window resizable-component"
     v-show="window?.state?.active ?? true"
     :draggable="desktopWorkspaceStore.overview ? 'true' : 'false'"
     @dragstart="onWorkspaceWindowDragStart"

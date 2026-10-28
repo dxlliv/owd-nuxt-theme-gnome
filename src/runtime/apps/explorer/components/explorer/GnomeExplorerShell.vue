@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IWindowController, WindowConfig } from '@owdproject/core'
+import type { IWindowController, WindowConfig } from '@owdproject/nuxt'
 import { useExplorerTabs } from '@owdproject/module-fs/runtime/composables/useExplorerTabs'
 import type { MenuItem } from 'primevue/menuitem'
 import { useExplorerWindow } from '@owdproject/module-fs/runtime/composables/useExplorerWindow'

@@ -1,5 +1,5 @@
 {
-  "name": "@owdproject/theme-gnome",
+  "name": "@dxlliv/owd-nuxt-theme-gnome",
   "version": "0.1.1",
   "description": "GNOME desktop theme for Open Web Desktop",
   "homepage": "https://github.com/owdproject/theme-gnome#readme",
@@ -41,33 +41,41 @@
   },
   "dependencies": {
     "@nuxt/kit": "^4.6.2",
-    "@owdproject/kit-primevue": "workspace:*",
-    "nuxt-desktop": "workspace:*",
+    "@owdproject/kit-primevue": "^4.0.0-alpha.2",
     "defu": "^6.1.4",
     "html2canvas": "^1.4.1",
-    "vue3-carousel": "^0.15.0"
+    "vue3-carousel": "^0.15.0",
+    "@owdproject/nuxt": "^4.0.0-alpha.3",
+    "@vueuse/core": "^15.0.0",
+    "@owdproject/fs": "^4.0.0-alpha.2"
   },
   "devDependencies": {
     "@nuxt/devtools": "^3.2.4",
     "@nuxt/module-builder": "^1.0.2",
     "@nuxt/schema": "^4.6.2",
-    "@owdproject/core": "workspace:*",
-    "@owdproject/module-fs": "workspace:*",
-    "@owdproject/kit-primevue": "workspace:*",
-    "@owdproject/kit-tailwind": "workspace:*",
+    "@owdproject/core": "^4.0.0-alpha.3",
+    "@owdproject/module-fs": "^4.0.0-alpha.2",
+    "@owdproject/kit-primevue": "^4.0.0-alpha.2",
+    "@owdproject/kit-tailwind": "^4.0.0-alpha.2",
     "nuxt": "^4.6.2",
-    "typescript": "~6.0.3"
+    "typescript": "~6.0.3",
+    "tailwindcss": "^3.4.19",
+    "jiti": "^2.7.0",
+    "vue-tsc": "^3.3.13"
   },
   "optionalDependencies": {
-    "@owdproject/app-classic-audioplayer": "workspace:*"
+    "@owdproject/app-classic-audioplayer": "^4.0.0-alpha.2"
   },
   "peerDependencies": {
-    "@owdproject/core": ">=4.0.0-alpha.0",
-    "nuxt-desktop": ">=1.0.0",
-    "@owdproject/kit-primevue": "^0.1.0",
-    "@owdproject/kit-tailwind": "^0.1.0",
-    "@owdproject/module-fs": "^0.0.6",
-    "nuxt": "^4.6.2"
+    "@owdproject/core": "^4.0.0-alpha.3",
+    "@owdproject/kit-primevue": "^4.0.0-alpha.2",
+    "@owdproject/kit-tailwind": "^4.0.0-alpha.2",
+    "@owdproject/module-fs": "^4.0.0-alpha.2",
+    "nuxt": "^4.6.2",
+    "@owdproject/nuxt": "^4.0.0-alpha.3",
+    "vue": "^3.5.33",
+    "vue-i18n": "^11.0.0",
+    "primevue": "^4.5.5"
   },
   "peerDependenciesMeta": {
     "@owdproject/module-fs": {

@@ -1,7 +1,6 @@
 import { nextTick } from 'vue'
 import { defineNuxtPlugin } from 'nuxt/app'
-import { useApplicationManager } from '@owdproject/core/runtime/composables/useApplicationManager'
-import { openVfsFile } from '@owdproject/module-fs/runtime/utils/utilFsOpenFile'
+import { useApplicationManager } from '@owdproject/nuxt/runtime/composables/useApplicationManager'
 
 export default defineNuxtPlugin({
   name: 'theme-gnome-playground-launch',
@@ -16,9 +15,8 @@ export default defineNuxtPlugin({
       }
       await applicationManager.execAppCommand(
         'org.owdproject.explorer',
-        'explorer /mnt/test',
+        'explorer /',
       )
-      await openVfsFile('/mnt/test/demo.mp3')
       return true
     }
 

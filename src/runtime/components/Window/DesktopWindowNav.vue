@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, inject } from 'vue'
-import type { IWindowController } from '@owdproject/core'
-import { useToggleWindowMaximize } from 'nuxt-desktop/runtime/composables/useToggleWindowMaximize'
+import type { IWindowController } from '@owdproject/nuxt'
+import { useToggleWindowMaximize } from '@owdproject/nuxt/runtime/composables/useToggleWindowMaximize'
 
 const windowController = inject<IWindowController>('windowController')
 const toggleWindowMaximize = useToggleWindowMaximize()
@@ -27,10 +27,14 @@ function onWindowClose() {
 </script>
 
 <template>
-  <DesktopCoreWindowNav @dblclick="onWindowMaximize">
+  <DesktopCoreWindowNav
+    class="owd-window-nav"
+    :class="{ 'owd-window-nav--focused': windowController?.state?.focused }"
+    @dblclick="onWindowMaximize"
+  >
     <div
       v-if="$slots.prepend"
-      class="owd-window-nav__btn-group owd-window-nav__btn-group--prepend"
+      class="desktop-window-nav__btn-group owd-window-nav__btn-group owd-window-nav__btn-group--prepend"
     >
       <slot name="prepend" />
     </div>
@@ -47,10 +51,10 @@ function onWindowClose() {
       </div>
     </template>
 
-    <div class="owd-window-nav__btn-group owd-window-nav__btn-group--append">
+    <div class="desktop-window-nav__btn-group owd-window-nav__btn-group owd-window-nav__btn-group--append">
       <div
         v-if="$slots.append"
-        class="owd-window-nav__btn-group owd-window-nav__btn-group--append-inner"
+        class="desktop-window-nav__btn-group owd-window-nav__btn-group owd-window-nav__btn-group--append-inner"
       >
         <slot name="append" />
       </div>

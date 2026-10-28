@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IWindowController } from '@owdproject/core'
+import type { IWindowController } from '@owdproject/nuxt'
 import ExplorerViewModeSwitch from '@owdproject/kit-primevue/runtime/components/explorer/ViewModeSwitch.vue'
 
 defineProps<{

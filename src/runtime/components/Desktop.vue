@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useDesktopWorkspaceStore } from 'nuxt-desktop/runtime/stores/storeDesktopWorkspace'
-import { useDesktopWorkArea } from 'nuxt-desktop/runtime/composables/useDesktopWorkArea'
+import { useDesktopWorkspaceStore } from '@owdproject/nuxt/runtime/stores/storeDesktopWorkspace'
+import { useDesktopWorkArea } from '@owdproject/nuxt/runtime/composables/useDesktopWorkArea'
 import { useSystemBar } from '../composables/useSystemBar'
 import { useWorkspaces } from '../composables/useWorkspaces'
 import { useGnomeLauncher } from '../composables/useGnomeLauncher'
@@ -40,6 +40,7 @@ useDesktopWorkArea(shellStageRef)
 <template>
   <DesktopCore
     v-bind="$props"
+    class="owd-desktop owd-desktop--gnome"
     :class="{
       'owd-desktop--overview-enabled': desktopWorkspaceStore.overview,
     }"
@@ -88,6 +89,8 @@ useDesktopWorkArea(shellStageRef)
 @use '../assets/styles/index.scss';
 
 .owd-desktop {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   background: var(--p-background-color);

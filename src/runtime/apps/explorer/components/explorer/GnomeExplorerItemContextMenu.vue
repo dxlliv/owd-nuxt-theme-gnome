@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ContextMenu from 'primevue/contextmenu'
-import type { IWindowController } from '@owdproject/core'
+import type { IWindowController } from '@owdproject/nuxt'
 import { explorerEntryAbsolutePath } from '@owdproject/module-fs/runtime/utils/utilExplorerEntryPath'
 import type { MenuItem } from 'primevue/menuitem'
 

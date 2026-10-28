@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IWindowController } from '@owdproject/core'
+import type { IWindowController } from '@owdproject/nuxt'
 import type { MenuItem } from 'primevue/menuitem'
 import GnomeExplorerChromeBand from './GnomeExplorerChromeBand.vue'
 import GnomeExplorerHeaderActions from './GnomeExplorerHeaderActions.vue'

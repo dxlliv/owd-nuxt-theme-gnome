@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IWindowController, WindowConfig } from '@owdproject/core'
+import type { IWindowController, WindowConfig } from '@owdproject/nuxt'
 import { computed } from 'vue'
 
 const props = defineProps<{

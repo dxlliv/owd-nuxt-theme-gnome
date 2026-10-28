@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { useDesktopManager } from 'nuxt-desktop/runtime/composables/useDesktopManager'
 import { useSystemBar } from '../../composables/useSystemBar'
 import { computed } from 'vue'
 
-const desktop = useDesktopManager()
 const systemBar = useSystemBar()
 
 const classes = computed(() => {

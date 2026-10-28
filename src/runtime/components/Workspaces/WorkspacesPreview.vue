@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { captureElementToCanvas } from 'nuxt-desktop/runtime/utils/utilCaptureElementToCanvas'
-import { useDesktopWorkspaceStore } from 'nuxt-desktop/runtime/stores/storeDesktopWorkspace'
+import { captureElementToCanvas } from '@owdproject/nuxt/runtime/utils/utilCaptureElementToCanvas'
+import { useDesktopWorkspaceStore } from '@owdproject/nuxt/runtime/stores/storeDesktopWorkspace'
 import { ref, onMounted, watch } from 'vue'
 
 const desktopWorkspaceStore = useDesktopWorkspaceStore()

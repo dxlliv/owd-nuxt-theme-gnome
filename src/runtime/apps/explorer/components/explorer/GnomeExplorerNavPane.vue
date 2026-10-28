@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IWindowController } from '@owdproject/core'
+import type { IWindowController } from '@owdproject/nuxt'
 import { openVfsFile } from '@owdproject/module-fs/runtime/utils/utilFsOpenFile'
 import { GNOME_TRASH_PATH } from '../../composables/useGnomeExplorerPlaces'
 import type { useGnomeExplorerPlaces } from '../../composables/useGnomeExplorerPlaces'
@@ -36,15 +36,15 @@ async function goPath(path: string) {
 
 async function onPlaceClick(id: (typeof placeRows.value)[number]['id']) {
   places.selectPlace(id)
-  if (id === 'home') await goPath('/')
+  if (id === 'home') await goPath(places.userHome.value)
   else if (id === 'trash') await goPath(GNOME_TRASH_PATH)
   else if (id === 'recent' || id === 'starred' || id === 'network') {
-    props.window.meta = { ...props.window.meta, gnomePlaceView: id }
+    props.window.meta.gnomePlaceView = id
   }
 }
 
 async function onFolderClick(path: string) {
-  props.window.meta = { ...props.window.meta, gnomePlaceView: null }
+  props.window.meta.gnomePlaceView = null
   await goPath(path)
 }
 

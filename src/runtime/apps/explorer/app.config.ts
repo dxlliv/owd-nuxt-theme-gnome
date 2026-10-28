@@ -1,4 +1,4 @@
-import type { IApplicationController } from '@owdproject/core'
+import type { IApplicationController } from '@owdproject/nuxt'
 
 export default {
   id: 'org.owdproject.explorer',
@@ -20,8 +20,8 @@ export default {
         minHeight: 440,
       },
       position: {
-        x: 400,
-        y: 240,
+        x: 120,
+        y: 100,
         z: 0,
       },
     },

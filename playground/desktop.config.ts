@@ -1,7 +1,6 @@
-import { defineDesktopConfig } from '@owdproject/core'
+import { defineDesktopConfig } from '@owdproject/nuxt'
 
 export default defineDesktopConfig({
-  theme: '@owdproject/theme-gnome',
   modules: ['@owdproject/module-fs', '@owdproject/nuxt-persistence-pinia'],
   apps: [
     '@owdproject/app-classic-audioplayer',
@@ -17,10 +16,5 @@ export default defineDesktopConfig({
   terminal: {
     welcomeMessage: 'Welcome to GNOME',
     prompt: '$',
-  },
-  fs: {
-    mounts: {
-      '/mnt/test': '/test-small.zip',
-    },
   },
 })

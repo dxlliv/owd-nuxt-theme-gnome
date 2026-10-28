@@ -1,3 +1,4 @@
+import { useDesktopShellIdentity } from '@owdproject/nuxt/runtime/composables/useDesktopShellIdentity'
 import { useRuntimeConfig } from 'nuxt/app'
 import { computed, ref } from 'vue'
 import { useFsRecentFiles } from '@owdproject/module-fs/runtime/composables/useFsRecentFiles'
@@ -21,6 +22,7 @@ export function useGnomeExplorerPlaces() {
   const { recentFiles, loadRecentFiles } = useFsRecentFiles()
   const { starredEntries } = useGnomeExplorerStarred()
   const runtimeConfig = useRuntimeConfig()
+  const { userHome } = useDesktopShellIdentity()
 
   type FolderEntry = {
     id: string
@@ -73,7 +75,7 @@ export function useGnomeExplorerPlaces() {
         return {
           id,
           label,
-          path: rawPath.startsWith('/') ? rawPath : `/${rawPath}`,
+          path: rawPath.startsWith('/') ? rawPath : `${userHome.value.replace(/\/$/, '')}/${rawPath}`,
           icon: icon || 'mdi:folder',
         }
       })
@@ -104,7 +106,7 @@ export function useGnomeExplorerPlaces() {
   function browsePathForPlace(): string | null {
     switch (activePlaceId.value) {
       case 'home':
-        return '/'
+        return userHome.value
       case 'trash':
         return GNOME_TRASH_PATH
       case 'folder':
@@ -115,6 +117,7 @@ export function useGnomeExplorerPlaces() {
   }
 
   return {
+    userHome,
     activePlaceId,
     activeFolderPath,
     recentFiles,

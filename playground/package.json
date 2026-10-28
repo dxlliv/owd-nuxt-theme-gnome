@@ -8,18 +8,24 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@owdproject/app-classic-audioplayer": "workspace:*",
-    "@owdproject/app-classic-videoplayer": "workspace:*",
-    "@owdproject/app-gridsky": "workspace:*",
-    "@owdproject/app-soundcloud": "workspace:*",
-    "@owdproject/app-terminal": "workspace:*",
-    "@owdproject/app-todo": "workspace:*",
-    "@owdproject/app-wasmboy": "workspace:*",
-    "@owdproject/app-youtube": "workspace:*",
-    "@owdproject/core": "workspace:*",
-    "@owdproject/module-fs": "workspace:*",
-    "@owdproject/nuxt-persistence-pinia": "workspace:*",
-    "@owdproject/theme-gnome": "workspace:*",
-    "nuxt": "^4.4.4"
+    "@owdproject/app-classic-audioplayer": "^4.0.0-alpha.2",
+    "@owdproject/app-classic-videoplayer": "^4.0.0-alpha.2",
+    "@owdproject/app-gridsky": "^4.0.0-alpha.2",
+    "@owdproject/app-soundcloud": "^4.0.0-alpha.2",
+    "@owdproject/app-terminal": "^4.0.0-alpha.2",
+    "@owdproject/app-todo": "^4.0.0-alpha.2",
+    "@owdproject/app-wasmboy": "^4.0.0-alpha.2",
+    "@owdproject/app-youtube": "^4.0.0-alpha.2",
+    "@owdproject/core": "^4.0.0-alpha.3",
+    "@owdproject/module-fs": "^4.0.0-alpha.2",
+    "@owdproject/nuxt-persistence-pinia": "^4.0.0-alpha.2",
+    "@dxlliv/owd-nuxt-theme-gnome": "workspace:*",
+    "nuxt": "^4.6.2",
+    "@owdproject/nuxt": "^4.0.0-alpha.3",
+    "primevue": "^4.5.5"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19",
+    "jiti": "^2.7.0"
   }
 }

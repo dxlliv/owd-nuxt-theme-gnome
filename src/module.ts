@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs'
 import {
   createResolver,
   addComponentsDir,
@@ -5,7 +6,7 @@ import {
   addImportsDir,
   installModule,
 } from '@nuxt/kit'
-import { defineDesktopTheme, hasDesktopModule } from 'nuxt-desktop'
+import { defineDesktopTheme, hasDesktopModule } from '@owdproject/nuxt'
 import { registerThemeTailwindPath } from '@owdproject/kit-tailwind/kit/registerTailwindPath'
 import {
   GNOME_EXPLORER_QUICK_ACCESS_SEED,
@@ -57,7 +58,7 @@ export default defineDesktopTheme({
         locales: [
           {
             code: 'en',
-            file: 'locales/en.ts',
+            file: existsSync(resolve('./i18n/locales/en.js')) ? 'locales/en.js' : 'locales/en.ts',
           },
         ],
       })
@@ -71,7 +72,7 @@ export default defineDesktopTheme({
 
     if (hasDesktopModule(nuxt, 'module-fs')) {
       addPlugin({
-        src: resolve('./runtime/apps/explorer/plugin.ts'),
+        src: resolve(existsSync(resolve('./runtime/apps/explorer/plugin.js')) ? './runtime/apps/explorer/plugin.js' : './runtime/apps/explorer/plugin.ts'),
         mode: 'client',
       })
 

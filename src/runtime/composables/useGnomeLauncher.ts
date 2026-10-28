@@ -1,7 +1,7 @@
 import { ref, computed } from 'vue'
 import { useScrollLock } from '@vueuse/core'
-import { useApplicationManager } from 'nuxt-desktop/runtime/composables/useApplicationManager'
-import { useApplicationEntries } from 'nuxt-desktop/runtime/composables/useApplicationEntries'
+import { useApplicationManager } from '@owdproject/nuxt/runtime/composables/useApplicationManager'
+import { useApplicationEntries } from '@owdproject/nuxt/runtime/composables/useApplicationEntries'
 
 const open = ref(false)
 const searchQuery = ref('')

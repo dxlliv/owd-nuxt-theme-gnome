@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { Carousel, Slide } from 'vue3-carousel'
-import { useDesktopWorkspaceStore } from 'nuxt-desktop/runtime/stores/storeDesktopWorkspace'
-import { useApplicationManager } from 'nuxt-desktop/runtime/composables/useApplicationManager'
-import { useDesktopManager } from 'nuxt-desktop/runtime/composables/useDesktopManager'
+import { useDesktopWorkspaceStore } from '@owdproject/nuxt/runtime/stores/storeDesktopWorkspace'
+import { useApplicationManager } from '@owdproject/nuxt/runtime/composables/useApplicationManager'
 import { useWorkspaces } from '../../composables/useWorkspaces'
 
 const applicationManager = useApplicationManager()
