@@ -1,6 +1,6 @@
 {
   "name": "@dxlliv/owd-nuxt-theme-gnome",
-  "version": "0.1.1",
+  "version": "4.0.0-alpha.3",
   "description": "GNOME desktop theme for Open Web Desktop",
   "homepage": "https://github.com/owdproject/theme-gnome#readme",
   "license": "MIT",
@@ -41,22 +41,22 @@
   },
   "dependencies": {
     "@nuxt/kit": "^4.6.2",
-    "@owdproject/kit-primevue": "^4.0.0-alpha.2",
+    "@owdproject/kit-primevue": "^4.0.0-alpha.3",
     "defu": "^6.1.4",
     "html2canvas": "^1.4.1",
     "vue3-carousel": "^0.15.0",
     "@owdproject/nuxt": "^4.0.0-alpha.3",
     "@vueuse/core": "^15.0.0",
-    "@owdproject/fs": "^4.0.0-alpha.2"
+    "@owdproject/fs": "^4.0.0-alpha.3"
   },
   "devDependencies": {
     "@nuxt/devtools": "^3.2.4",
     "@nuxt/module-builder": "^1.0.2",
     "@nuxt/schema": "^4.6.2",
     "@owdproject/core": "^4.0.0-alpha.3",
-    "@owdproject/module-fs": "^4.0.0-alpha.2",
-    "@owdproject/kit-primevue": "^4.0.0-alpha.2",
-    "@owdproject/kit-tailwind": "^4.0.0-alpha.2",
+    "@owdproject/module-fs": "^4.0.0-alpha.3",
+    "@owdproject/kit-primevue": "^4.0.0-alpha.3",
+    "@owdproject/kit-tailwind": "^4.0.0-alpha.3",
     "nuxt": "^4.6.2",
     "typescript": "~6.0.3",
     "tailwindcss": "^3.4.19",
@@ -64,13 +64,13 @@
     "vue-tsc": "^3.3.13"
   },
   "optionalDependencies": {
-    "@owdproject/app-classic-audioplayer": "^4.0.0-alpha.2"
+    "@owdproject/app-classic-audioplayer": "^4.0.0-alpha.3"
   },
   "peerDependencies": {
     "@owdproject/core": "^4.0.0-alpha.3",
-    "@owdproject/kit-primevue": "^4.0.0-alpha.2",
-    "@owdproject/kit-tailwind": "^4.0.0-alpha.2",
-    "@owdproject/module-fs": "^4.0.0-alpha.2",
+    "@owdproject/kit-primevue": "^4.0.0-alpha.3",
+    "@owdproject/kit-tailwind": "^4.0.0-alpha.3",
+    "@owdproject/module-fs": "^4.0.0-alpha.3",
     "nuxt": "^4.6.2",
     "@owdproject/nuxt": "^4.0.0-alpha.3",
     "vue": "^3.5.33",
@@ -81,5 +81,10 @@
     "@owdproject/module-fs": {
       "optional": true
     }
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "alpha",
+    "registry": "https://registry.npmjs.org/"
   }
 }
