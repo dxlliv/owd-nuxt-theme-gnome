@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useApplicationManager } from '@owdproject/core/runtime/composables/useApplicationManager'
+import { useApplicationManager } from 'nuxt-desktop/runtime/composables/useApplicationManager'
 import { useApplicationMenu } from '../../../composables/useApplicationMenu'
 
 const applicationManager = useApplicationManager()

@@ -1,6 +1,6 @@
 import { ref, computed } from 'vue'
-import { useApplicationManager } from '@owdproject/core/runtime/composables/useApplicationManager'
-import { useApplicationEntries } from '@owdproject/core/runtime/composables/useApplicationEntries'
+import { useApplicationManager } from 'nuxt-desktop/runtime/composables/useApplicationManager'
+import { useApplicationEntries } from 'nuxt-desktop/runtime/composables/useApplicationEntries'
 import { getSortedCategories } from '../utils/utilApplications'
 
 const enabled = ref(false)

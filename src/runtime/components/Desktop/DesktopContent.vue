@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDesktopManager } from '@owdproject/core/runtime/composables/useDesktopManager'
+import { useDesktopManager } from 'nuxt-desktop/runtime/composables/useDesktopManager'
 import { useSystemBar } from '../../composables/useSystemBar'
 import { computed } from 'vue'
 

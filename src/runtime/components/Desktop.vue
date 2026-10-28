@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useDesktopWorkspaceStore } from '@owdproject/core/runtime/stores/storeDesktopWorkspace'
-import { useDesktopWorkArea } from '@owdproject/core/runtime/composables/useDesktopWorkArea'
+import { useDesktopWorkspaceStore } from 'nuxt-desktop/runtime/stores/storeDesktopWorkspace'
+import { useDesktopWorkArea } from 'nuxt-desktop/runtime/composables/useDesktopWorkArea'
 import { useSystemBar } from '../composables/useSystemBar'
 import { useWorkspaces } from '../composables/useWorkspaces'
 import { useGnomeLauncher } from '../composables/useGnomeLauncher'

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDesktopWorkspaceStore } from '@owdproject/core/runtime/stores/storeDesktopWorkspace'
+import { useDesktopWorkspaceStore } from 'nuxt-desktop/runtime/stores/storeDesktopWorkspace'
 
 const props = defineProps<{
   window?: IWindowController

@@ -2,7 +2,7 @@
 import { useNotificationsMenu } from '../../../composables/useNotificationsMenu'
 import { useTemplateRef, ref } from 'vue'
 import { onClickOutside } from '@vueuse/core'
-import { useDesktop } from '@owdproject/core/runtime/composables/useDesktop'
+import { useDesktop } from 'nuxt-desktop/runtime/composables/useDesktop'
 
 const notificationsMenu = useNotificationsMenu()
 const notificationsMenuElement = useTemplateRef('notificationsMenuElement')

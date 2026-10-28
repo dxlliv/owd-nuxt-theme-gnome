@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useApplicationMenu } from '../../../composables/useApplicationMenu'
-import { useDesktopManager } from '@owdproject/core/runtime/composables/useDesktopManager'
+import { useDesktopManager } from 'nuxt-desktop/runtime/composables/useDesktopManager'
 
 import { useTemplateRef } from 'vue'
 import { onClickOutside } from '@vueuse/core'

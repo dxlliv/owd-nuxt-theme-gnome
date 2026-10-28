@@ -1,3 +1,5 @@
+import type { Reactive } from 'vue'
+import type { IApplicationController } from '@owdproject/core'
 import { baseCategories } from '../consts'
 
 export function getSortedCategories(

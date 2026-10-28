@@ -1,7 +1,7 @@
-import { fs } from '@zenfs/core'
+import { fs } from '@owdproject/fs'
 import { useRuntimeConfig } from 'nuxt/app'
 import { computed, ref, watch } from 'vue'
-import { useDesktopShellIdentity } from '@owdproject/core/runtime/composables/useDesktopShellIdentity'
+import { useDesktopShellIdentity } from 'nuxt-desktop/runtime/composables/useDesktopShellIdentity'
 
 export type GnomeStarredEntry = {
   path: string

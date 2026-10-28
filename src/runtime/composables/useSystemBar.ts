@@ -1,15 +1,15 @@
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 import { useAppConfig } from 'nuxt/app'
 
 export function useSystemBar() {
   const appConfig = useAppConfig()
 
   const enabled = computed(() => {
-    return appConfig.desktop?.systemBar?.enabled
+    return (appConfig.desktop as any)?.systemBar?.enabled
   })
 
   const position = computed(() => {
-    return appConfig.desktop?.systemBar?.position
+    return (appConfig.desktop as any)?.systemBar?.position
   })
 
   return {

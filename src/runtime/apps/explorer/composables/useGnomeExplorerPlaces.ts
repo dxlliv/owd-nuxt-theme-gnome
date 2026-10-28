@@ -31,7 +31,7 @@ export function useGnomeExplorerPlaces() {
 
   const explorerConfig = computed(
     () =>
-      (runtimeConfig.public.desktop.explorer ?? {}) as {
+      ((runtimeConfig.public.desktop as any)?.explorer ?? {}) as {
         mountLabels?: Record<string, string>
         specialFolders?: FolderEntry[]
         specialFoldersExtra?: FolderEntry[]
@@ -40,7 +40,7 @@ export function useGnomeExplorerPlaces() {
   )
 
   const fsMounts = computed(() => {
-    const raw = runtimeConfig.public.desktop.fs?.mounts
+    const raw = (runtimeConfig.public.desktop as any)?.fs?.mounts
     if (!raw || typeof raw !== 'object') return {} as Record<string, unknown>
     return raw as Record<string, unknown>
   })

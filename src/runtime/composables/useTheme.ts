@@ -1,3 +1,5 @@
+import { ref } from 'vue'
+
 export const useTheme = () => {
   const currentTheme = ref<'dark' | 'light'>('dark')
 

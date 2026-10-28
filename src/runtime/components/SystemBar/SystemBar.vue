@@ -1,6 +1,6 @@
 <script setup>
-import { useDesktopWorkspaceStore } from '@owdproject/core/runtime/stores/storeDesktopWorkspace'
-import { useDesktopManager } from '@owdproject/core/runtime/composables/useDesktopManager'
+import { useDesktopWorkspaceStore } from 'nuxt-desktop/runtime/stores/storeDesktopWorkspace'
+import { useDesktopManager } from 'nuxt-desktop/runtime/composables/useDesktopManager'
 import { computed } from '@vue/reactivity'
 import { useWorkspaces } from '../../composables/useWorkspaces'
 

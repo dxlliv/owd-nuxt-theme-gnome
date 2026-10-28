@@ -1,5 +1,5 @@
 <script setup>
-import { useDesktop } from '@owdproject/core/runtime/composables/useDesktop'
+import { useDesktop } from 'nuxt-desktop/runtime/composables/useDesktop'
 import { useTemplateRef, ref } from 'vue'
 import { onClickOutside } from '@vueuse/core'
 

@@ -5,12 +5,12 @@ import {
   addImportsDir,
   installModule,
 } from '@nuxt/kit'
-import { defineDesktopTheme, hasDesktopModule } from '@owdproject/core'
+import { defineDesktopTheme, hasDesktopModule } from 'nuxt-desktop'
 import { registerThemeTailwindPath } from '@owdproject/kit-tailwind/kit/registerTailwindPath'
 import {
   GNOME_EXPLORER_QUICK_ACCESS_SEED,
   GNOME_EXPLORER_SPECIAL_FOLDERS,
-} from './runtime/apps/explorer/explorerNav.defaults'
+} from './explorerNav.defaults'
 
 export default defineDesktopTheme({
   meta: {

@@ -1,3 +1,5 @@
+import type { IApplicationController } from '@owdproject/core'
+
 export default {
   id: 'org.owdproject.explorer',
   title: 'Files',
