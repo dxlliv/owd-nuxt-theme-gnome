@@ -2,8 +2,7 @@ name: Deploy playground to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -19,126 +18,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout OWD client (workspace deps)
+      - name: Checkout theme
         uses: actions/checkout@v4
-        with:
-          repository: owdproject/client
-          path: client
-          submodules: recursive
-
-      - name: Checkout kit-tailwind
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/kit-tailwind
-          path: client/packages/kit-tailwind
-
-      - name: Checkout kit-primevue
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/kit-primevue
-          path: client/packages/kit-primevue
-
-      - name: Checkout module-fs
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/module-fs
-          path: client/packages/module-fs
-
-      - name: Checkout module-persistence
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/module-persistence
-          path: client/packages/module-persistence
-
-      - name: Checkout app-todo
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/app-todo
-          path: client/apps/app-todo
-
-      - name: Checkout app-classic-audioplayer
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/app-classic-audioplayer
-          path: client/apps/app-classic-audioplayer
-
-      - name: Checkout app-classic-videoplayer
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/app-classic-videoplayer
-          path: client/apps/app-classic-videoplayer
-
-      - name: Checkout app-gridsky
-        uses: actions/checkout@v4
-        with:
-          repository: atproto-os/app-gridsky
-          path: client/apps/app-gridsky
-
-      - name: Checkout app-youtube
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/app-youtube
-          path: client/apps/app-youtube
-
-      - name: Checkout app-soundcloud
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/app-soundcloud
-          path: client/apps/app-soundcloud
-
-      - name: Checkout app-wasmboy
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/app-wasmboy
-          path: client/apps/app-wasmboy
-
-      - name: Checkout app-terminal
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/app-terminal
-          path: client/apps/app-terminal
-
-      - name: Checkout theme-nova
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/theme-nova
-          path: client/themes/theme-nova
-
-      - name: Overlay this theme-gnome repo
-        uses: actions/checkout@v4
-        with:
-          path: client/themes/theme-gnome
-
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 22
-
-      - run: npm i -g --force corepack@latest && corepack enable
-
-      - name: Apply wasmboy allowBuilds for playground
-        working-directory: client
-        run: |
-          node themes/theme-gnome/ci/patch-client-workspace.mjs
-          grep -Fq 'audiobuffer-to-wav@https://codeload.github.com/torch2424/audiobuffer-to-wav' pnpm-workspace.yaml
-
-      - name: Install monorepo dependencies
-        working-directory: client
+      - name: Setup pnpm
+        run: npm i -g --force corepack@latest && corepack enable && corepack prepare pnpm@11.7.0 --activate
+      - name: Install standalone workspace
         run: pnpm install --no-frozen-lockfile
-
-      - name: Prepare module and playground
-        working-directory: client/themes/theme-gnome
-        run: pnpm run dev:prepare
-
-      - name: Generate static playground
-        working-directory: client/themes/theme-gnome
-        run: pnpm run dev:generate
+      - name: Build theme module
+        run: pnpm run prepack
+      - name: Generate standalone playground
+        run: pnpm --dir playground run generate
         env:
-          NUXT_APP_BASE_URL: /theme-gnome/
-
+          NUXT_APP_BASE_URL: /${{ github.event.repository.name }}/
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: client/themes/theme-gnome/playground/.output/public
+          path: playground/.output/public
 
   deploy:
     needs: build

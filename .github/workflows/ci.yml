@@ -42,7 +42,7 @@ jobs:
         working-directory: playground
         run: pnpm exec nuxt generate
         env:
-          NUXT_APP_BASE_URL: /theme-gnome/
+          NUXT_APP_BASE_URL: /${{ github.event.repository.name }}/
 
       - name: Upload playground artifact
         uses: actions/upload-artifact@v4
