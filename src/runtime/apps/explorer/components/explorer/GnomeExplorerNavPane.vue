@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { IWindowController } from '@owdproject/nuxt'
-import { openVfsFile } from '@owdproject/module-fs/runtime/utils/utilFsOpenFile'
+import { openVfsFile } from '@owdproject/module-nuxt-fs/runtime/utils/utilFsOpenFile'
 import { GNOME_TRASH_PATH } from '../../composables/useGnomeExplorerPlaces'
 import type { useGnomeExplorerPlaces } from '../../composables/useGnomeExplorerPlaces'
 import { computed, inject, ref } from 'vue'

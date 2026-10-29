@@ -1,4 +1,4 @@
-import { fs } from '@owdproject/fs'
+import { fs } from '@owdproject/module-fs'
 import { useRuntimeConfig } from 'nuxt/app'
 import { computed, ref, watch } from 'vue'
 import { useDesktopShellIdentity } from '@owdproject/nuxt/runtime/composables/useDesktopShellIdentity'

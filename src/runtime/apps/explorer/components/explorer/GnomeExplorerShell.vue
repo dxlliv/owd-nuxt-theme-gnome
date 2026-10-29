@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { IWindowController, WindowConfig } from '@owdproject/nuxt'
-import { useExplorerTabs } from '@owdproject/module-fs/runtime/composables/useExplorerTabs'
+import { useExplorerTabs } from '@owdproject/module-nuxt-fs/runtime/composables/useExplorerTabs'
 import type { MenuItem } from 'primevue/menuitem'
-import { useExplorerWindow } from '@owdproject/module-fs/runtime/composables/useExplorerWindow'
-import Frame from '@owdproject/kit-primevue/runtime/components/explorer/Frame.vue'
+import { useExplorerWindow } from '@owdproject/module-nuxt-fs/runtime/composables/useExplorerWindow'
+import Frame from '@owdproject/kit-nuxt-primevue/runtime/components/explorer/Frame.vue'
 import GnomeExplorerHeaderBar from './GnomeExplorerHeaderBar.vue'
 import GnomeExplorerMainPane from './GnomeExplorerMainPane.vue'
 import GnomeExplorerTabStrip from './GnomeExplorerTabStrip.vue'
