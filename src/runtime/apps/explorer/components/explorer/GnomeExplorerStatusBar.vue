@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { IWindowController } from '@owdproject/nuxt'
-import ExplorerViewModeSwitch from '@owdproject/kit-nuxt-primevue/runtime/components/explorer/ViewModeSwitch.vue'
+import ExplorerViewModeSwitch from '@owdproject/nuxt-kit-primevue/runtime/components/explorer/ViewModeSwitch.vue'
 
 defineProps<{
   count: number

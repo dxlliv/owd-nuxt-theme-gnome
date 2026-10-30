@@ -3,7 +3,7 @@ import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ContextMenu from 'primevue/contextmenu'
 import type { IWindowController } from '@owdproject/nuxt'
-import { explorerEntryAbsolutePath } from '@owdproject/module-nuxt-fs/runtime/utils/utilExplorerEntryPath'
+import { explorerEntryAbsolutePath } from '@owdproject/nuxt-module-fs/runtime/utils/utilExplorerEntryPath'
 import type { MenuItem } from 'primevue/menuitem'
 
 const { t } = useI18n()

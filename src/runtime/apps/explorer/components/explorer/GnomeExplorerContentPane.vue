@@ -2,10 +2,10 @@
 import type { IWindowController } from '@owdproject/nuxt'
 import GnomeExplorerItemContextMenu from './GnomeExplorerItemContextMenu.vue'
 import GnomeExplorerFileIcon from './GnomeExplorerFileIcon.vue'
-import { openVfsFile } from '@owdproject/module-nuxt-fs/runtime/utils/utilFsOpenFile'
+import { openVfsFile } from '@owdproject/nuxt-module-fs/runtime/utils/utilFsOpenFile'
 import type { useGnomeExplorerPlaces } from '../../composables/useGnomeExplorerPlaces'
 import { computed, inject } from 'vue'
-import { explorerEntryAbsolutePath } from '@owdproject/module-nuxt-fs/runtime/utils/utilExplorerEntryPath'
+import { explorerEntryAbsolutePath } from '@owdproject/nuxt-module-fs/runtime/utils/utilExplorerEntryPath'
 
 const props = defineProps<{
   window: IWindowController

@@ -7,7 +7,7 @@ import {
   installModule,
 } from '@nuxt/kit'
 import { defineDesktopTheme, hasDesktopModule } from '@owdproject/nuxt'
-import { registerThemeTailwindPath } from '@owdproject/kit-nuxt-tailwind/kit/registerTailwindPath'
+import { registerThemeTailwindPath } from '@owdproject/nuxt-kit-tailwind/kit/registerTailwindPath'
 import {
   GNOME_EXPLORER_QUICK_ACCESS_SEED,
   GNOME_EXPLORER_SPECIAL_FOLDERS,
@@ -42,7 +42,7 @@ export default defineDesktopTheme({
   async setup(_options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
 
-    await installModule('@owdproject/kit-nuxt-primevue')
+    await installModule('@owdproject/nuxt-kit-primevue')
 
     registerThemeTailwindPath(nuxt, import.meta.url)
 

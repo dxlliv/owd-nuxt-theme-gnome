@@ -26,7 +26,7 @@ Install the theme and `@owdproject/nuxt`, then configure:
 export default defineNuxtConfig({
   ssr: false,
   modules: ['@owdproject/nuxt'],
-  desktop: { theme: '@dxlliv/owd-theme-nuxt-gnome' },
+  desktop: { theme: '@owdproject/nuxt-theme-gnome' },
 })
 ```
 

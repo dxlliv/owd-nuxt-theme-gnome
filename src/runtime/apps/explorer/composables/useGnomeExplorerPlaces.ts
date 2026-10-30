@@ -1,7 +1,7 @@
 import { useDesktopShellIdentity } from '@owdproject/nuxt/runtime/composables/useDesktopShellIdentity'
 import { useRuntimeConfig } from 'nuxt/app'
 import { computed, ref } from 'vue'
-import { useFsRecentFiles } from '@owdproject/module-nuxt-fs/runtime/composables/useFsRecentFiles'
+import { useFsRecentFiles } from '@owdproject/nuxt-module-fs/runtime/composables/useFsRecentFiles'
 import { useGnomeExplorerStarred } from './useGnomeExplorerStarred'
 
 export type GnomePlaceId =
