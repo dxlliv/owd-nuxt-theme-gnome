@@ -9,7 +9,7 @@ pnpm install
 pnpm dev
 ```
 
-The local workspace contains this theme and its playground. It installs the core, Nuxt adapter, kits, filesystem, persistence, and demo apps as packages. It does not require the client repository or `nuxt-desktop`.
+The local workspace contains this theme and its playground. It installs the core, Nuxt adapter, kits, filesystem, persistence, and demo apps as packages. It does not require the client repository.
 
 ```sh
 pnpm dev:build
