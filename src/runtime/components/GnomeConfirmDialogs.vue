@@ -39,8 +39,8 @@
           Maintained by Diego Villa (<a href="https://github.com/dxlliv" target="_blank">@dxlliv</a>).
         </p>
         <p class="mt-2">
-          <a href="https://github.com/dxlliv/theme-gnome" target="_blank">
-            github.com/dxlliv/theme-gnome
+          <a href="https://github.com/dxlliv/owd-nuxt-theme-gnome" target="_blank">
+            github.com/dxlliv/owd-nuxt-theme-gnome
           </a>
         </p>
       </div>

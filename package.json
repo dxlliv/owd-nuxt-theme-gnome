@@ -2,7 +2,7 @@
   "name": "@owdproject/nuxt-theme-gnome",
   "version": "4.0.0-alpha.3",
   "description": "GNOME desktop theme for Open Web Desktop",
-  "homepage": "https://github.com/dxlliv/nuxt-theme-gnome#readme",
+  "homepage": "https://github.com/dxlliv/owd-nuxt-theme-gnome#readme",
   "license": "MIT",
   "author": {
     "name": "Open Web Desktop Team",
